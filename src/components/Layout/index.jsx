@@ -1,5 +1,10 @@
 import React from "react";
+import Sidebar from "../Sidebar";
 
 export default function Layout() {
-  return <div>This is Layout</div>;
+  return (
+    <>
+      <Sidebar />
+    </>
+  );
 }
