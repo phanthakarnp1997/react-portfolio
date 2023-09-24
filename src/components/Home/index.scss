@@ -7,7 +7,7 @@
   width: 100%;
   position: fixed;
   letter-spacing: 1.5px;
-  color: white;
+  color: #a8c8e6;
 }
 
 .information {
@@ -15,7 +15,32 @@
   font-size: 5rem;
 }
 
+.role {
+  color: #e69c24;
+}
+
 .description {
   max-width: 800px;
   text-align: justify;
+}
+
+.emoji-animation::after {
+  min-width: 1.4em;
+  margin: 0.3em 0.4em;
+  text-align: center;
+  animation-name: twoFrames;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.wave::after {
+  content: "✋";
+  --emoji: "👋";
+}
+
+@keyframes twoFrames {
+  50% {
+    content: var(--emoji);
+  }
 }

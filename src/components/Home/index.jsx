@@ -5,9 +5,10 @@ export default function Home() {
   return (
     <div className="home-page">
       <div className="information">
-        <p>Hi 😁👋</p>
-        <p>I'm Phanthakarn Plukpanya (Dew)</p>
-        <p>Software Developer</p>
+        <span>Hi</span>
+        <span className="emoji-animation wave"></span>
+        <p>I'm Phanthakarn Plukpanya </p>
+        <p className="role">Software Developer</p>
       </div>
       <div className="description">
         <h2>
