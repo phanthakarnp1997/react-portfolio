@@ -1,0 +1,20 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  letter-spacing: 1.5px;
+  color: white;
+}
+
+.information {
+  font-size: 5rem;
+}
+
+.description {
+  max-width: 800px;
+  text-align: justify;
+}
