@@ -18,19 +18,34 @@ export default function Sidebar() {
         <p className="text-logo">P</p>
       </Link>
       <nav className="nav-icon">
-        <FontAwesomeIcon icon={faHouse} />
-        <FontAwesomeIcon icon={faAddressCard} />
-        <FontAwesomeIcon icon={faTimeline} />
-        <FontAwesomeIcon icon={faLightbulb} />
-        <FontAwesomeIcon icon={faEnvelope} />
+        <div className="icon-hover">
+          <FontAwesomeIcon icon={faHouse} />
+          <span>Home</span>
+        </div>
+        <div className="icon-hover">
+          <FontAwesomeIcon icon={faAddressCard} />
+          <span>About Me</span>
+        </div>
+        <div className="icon-hover">
+          <FontAwesomeIcon icon={faTimeline} />
+          <span>Experience</span>
+        </div>
+        <div className="icon-hover">
+          <FontAwesomeIcon icon={faLightbulb} />
+          <span>Skill</span>
+        </div>
+        <div className="icon-hover">
+          <FontAwesomeIcon icon={faEnvelope} />
+          <span>Contact</span>
+        </div>
       </nav>
 
       <ul className="nav-social">
         <li>
-          <FontAwesomeIcon icon={faLinkedin} />
+          <FontAwesomeIcon icon={faLinkedin} className="icon-hover" />
         </li>
         <li>
-          <FontAwesomeIcon icon={faGithub} />
+          <FontAwesomeIcon icon={faGithub} className="icon-hover" />
         </li>
       </ul>
     </div>
