@@ -1,16 +1,23 @@
 import "./index.scss";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import AnimateText from "../AnimateText";
 
 export default function Home() {
   const [letterClass, setLetterClass] = useState("text-animate");
+  const sayhi = "Hi !";
   const name = "I'm Phanthakarn Plukpanya";
   const rolename = "Software Developer";
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLetterClass("text-animate-hover");
+    }, 6000);
+  }, []);
 
   return (
     <div className="home-page">
       <div className="information">
-        <div className={`${letterClass} _5`}>Hi !</div>
+        <AnimateText idx={5} letterClass={`${letterClass}`} text={sayhi} />
         <AnimateText idx={10} letterClass={letterClass} text={name} />
         <div className="role">
           <AnimateText idx={35} letterClass={letterClass} text={rolename} />

@@ -13,17 +13,13 @@
 @for $i from 1 through 100 {
   .text-animate._#{$i} {
     animation-delay: #{math.div($i, 10)}s;
-    // &:hover {
-    //   color: yellow;
-    // }
   }
-}
-
-@keyframes bounceIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
+  .text-animate-hover._#{$i} {
+    &:hover {
+      min-width: 10px;
+      display: inline-block;
+      cursor: default;
+      animation: rubberband 1s;
+    }
   }
 }
