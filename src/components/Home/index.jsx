@@ -17,7 +17,11 @@ export default function Home() {
   return (
     <div className="home-page">
       <div className="information">
-        <AnimateText idx={5} letterClass={`${letterClass}`} text={sayhi} />
+        <AnimateText
+          idx={5}
+          letterClass={`say-hi ${letterClass}`}
+          text={sayhi}
+        />
         <AnimateText idx={10} letterClass={letterClass} text={name} />
         <div className="role">
           <AnimateText idx={35} letterClass={letterClass} text={rolename} />
