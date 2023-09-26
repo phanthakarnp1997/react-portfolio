@@ -1,12 +1,14 @@
 import "./index.scss";
 import React from "react";
 
-export default function Terminal({ displayItem }) {
+export default function Terminal({ titleBar, itemDisplay }) {
   return (
     <>
-      <div className="bar"></div>
+      <div className="bar">
+        <span>{titleBar}</span>
+      </div>
       <div id="screen">
-        <div className="item--display">{displayItem}</div>
+        <div className="item--display">{itemDisplay}</div>
       </div>
     </>
   );

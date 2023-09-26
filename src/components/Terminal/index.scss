@@ -1,5 +1,6 @@
 .bar {
-  text-align: center;
+  text-align: start;
+  color: #444;
   width: 750px;
   height: 25px;
   background-color: #dad9d9;
@@ -9,6 +10,9 @@
   float: none;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  span {
+    margin-left: 2%;
+  }
 }
 #screen {
   background-color: #00566c;

@@ -9,6 +9,8 @@ export default function Home() {
   const sayhi = "Hi !";
   const name = "I'm Phanthakarn Plukpanya";
   const rolename = "Software Developer";
+  const terminalTitleBar = "Phanthakarn Plukpanya Portfolio ~";
+
   const descriptionTypingComponent = (
     <TypeAnimation
       speed={50}
@@ -42,7 +44,10 @@ export default function Home() {
         </div>
       </div>
       <div className={`description`}>
-        <Terminal displayItem={descriptionTypingComponent} />
+        <Terminal
+          titleBar={terminalTitleBar}
+          itemDisplay={descriptionTypingComponent}
+        />
       </div>
     </div>
   );
