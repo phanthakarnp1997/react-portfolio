@@ -2,12 +2,25 @@ import "./index.scss";
 import React, { useState, useEffect } from "react";
 import AnimateText from "../AnimateText";
 import { TypeAnimation } from "react-type-animation";
+import Terminal from "../Terminal";
 
 export default function Home() {
   const [letterClass, setLetterClass] = useState("text-animate");
   const sayhi = "Hi !";
   const name = "I'm Phanthakarn Plukpanya";
   const rolename = "Software Developer";
+  const descriptionTypingComponent = (
+    <TypeAnimation
+      speed={50}
+      sequence={[
+        `Greetings, I am Dew, an experienced software developer with a passion
+          for problem-solving. I am eager to expand my knowledge of cutting-edge
+          technologies and embrace fresh challenges to further enhance my
+          skillset.`,
+        1000,
+      ]}
+    />
+  );
 
   useEffect(() => {
     setTimeout(() => {
@@ -29,16 +42,7 @@ export default function Home() {
         </div>
       </div>
       <div className={`description`}>
-        <TypeAnimation
-          speed={50}
-          sequence={[
-            `Greetings, I am Dew, an experienced software developer with a passion
-          for problem-solving. I am eager to expand my knowledge of cutting-edge
-          technologies and embrace fresh challenges to further enhance my
-          skillset.`,
-            1000,
-          ]}
-        />
+        <Terminal displayItem={descriptionTypingComponent} />
       </div>
     </div>
   );
