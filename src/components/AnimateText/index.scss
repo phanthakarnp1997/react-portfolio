@@ -18,8 +18,10 @@
     &:hover {
       min-width: 10px;
       display: inline-block;
+      animation-fill-mode: both;
+      animation: rubberBand 1s;
+      color: #ffd700;
       cursor: default;
-      animation: rubberband 1s;
     }
   }
 }
