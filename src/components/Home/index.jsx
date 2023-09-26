@@ -1,6 +1,7 @@
 import "./index.scss";
 import React, { useState, useEffect } from "react";
 import AnimateText from "../AnimateText";
+import { TypeAnimation } from "react-type-animation";
 
 export default function Home() {
   const [letterClass, setLetterClass] = useState("text-animate");
@@ -28,12 +29,16 @@ export default function Home() {
         </div>
       </div>
       <div className={`description`}>
-        <h2>
-          Greetings, I am Dew, an experienced software developer with a passion
+        <TypeAnimation
+          speed={50}
+          sequence={[
+            `Greetings, I am Dew, an experienced software developer with a passion
           for problem-solving. I am eager to expand my knowledge of cutting-edge
           technologies and embrace fresh challenges to further enhance my
-          skillset.
-        </h2>
+          skillset.`,
+            1000,
+          ]}
+        />
       </div>
     </div>
   );
