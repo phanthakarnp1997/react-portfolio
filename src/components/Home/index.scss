@@ -7,19 +7,26 @@
   width: 100%;
   position: fixed;
   letter-spacing: 1.5px;
-  color: #a8c8e6;
+  color: #ffffff;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .information {
   font-size: 5rem;
-}
-
-.role {
-  color: #e69c24;
-}
-
-.say-hi {
-  color: #008283;
+  div:nth-child(2) {
+    span:nth-child(4) {
+      color: #f9f871;
+    }
+  }
+  div:nth-child(3) {
+    span:nth-child(9) {
+      color: #f9f871;
+    }
+  }
 }
 
 .description {
@@ -32,4 +39,5 @@
   animation-duration: 1s;
   animation-delay: 5s;
   animation-fill-mode: forwards;
+  max-width: 500px;
 }
