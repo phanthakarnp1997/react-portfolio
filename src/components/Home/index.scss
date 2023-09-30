@@ -74,3 +74,23 @@
   animation-fill-mode: forwards;
   max-width: 500px;
 }
+
+.image-zone {
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translateY(-50%);
+  width: 35%;
+  vertical-align: middle;
+  display: table-cell;
+  max-height: 90%;
+  z-index: -1;
+  img {
+    width: 500px;
+    height: 500px;
+    -webkit-animation: spin 20s linear infinite;
+    -moz-animation: spin 20s linear infinite;
+    animation: spin 20s linear infinite;
+    filter: brightness(70%);
+  }
+}

@@ -1,4 +1,5 @@
 import "./index.scss";
+import HeroImage from "../../assets/rocket-ship.png";
 import React, { useState, useEffect } from "react";
 import AnimateText from "../AnimateText";
 import { TypeAnimation } from "react-type-animation";
@@ -35,6 +36,9 @@ export default function Home() {
         <div className="greeting-zone description">
           {typingIntroduceComponent}
         </div>
+      </div>
+      <div className="image-zone">
+        <img src={HeroImage} alt="hero-image" />
       </div>
     </div>
   );
