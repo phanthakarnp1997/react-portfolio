@@ -31,7 +31,9 @@ export default function Home() {
           <div>
             <AnimateText idx={35} letterClass={letterClass} text={rolename} />
           </div>
-          <div className={`description`}>{typingIntroduceComponent}</div>
+        </div>
+        <div className="greeting-zone description">
+          {typingIntroduceComponent}
         </div>
       </div>
     </div>

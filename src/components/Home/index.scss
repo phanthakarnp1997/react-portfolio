@@ -29,6 +29,39 @@
   }
 }
 
+.greeting-zone {
+  position: absolute;
+  left: 10%;
+  top: 68%;
+  transform: translateY(-50%);
+  width: 35%;
+  vertical-align: middle;
+  display: table-cell;
+  max-height: 90%;
+  &:before {
+    content: "<greeting>";
+    color: #ffd700;
+    font-size: 18px;
+    position: absolute;
+    margin-top: -20px;
+    left: -10px;
+    opacity: 0.6;
+    line-height: 10px;
+  }
+
+  &:after {
+    content: "<greeting/>";
+    color: #ffd700;
+    font-size: 18px;
+    line-height: 10px;
+    position: absolute;
+    left: -30px;
+    bottom: -20px;
+    margin-left: 20px;
+    opacity: 0.6;
+  }
+}
+
 .description {
   display: inline-block;
   vertical-align: top;

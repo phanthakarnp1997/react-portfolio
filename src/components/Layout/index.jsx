@@ -8,7 +8,10 @@ export default function Layout() {
     <>
       <div className="App">
         <Sidebar />
-        <div className="page">
+        <div className="page star-field">
+          <div class="layer"></div>
+          <div class="layer"></div>
+          <div class="layer"></div>
           <span className="tags top-tags">&lt;body&gt;</span>
           <Outlet />
           <span className="tags bottom-tags">

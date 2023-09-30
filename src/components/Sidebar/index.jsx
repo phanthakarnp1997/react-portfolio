@@ -42,10 +42,17 @@ export default function Sidebar() {
 
       <ul className="nav-social">
         <li>
-          <FontAwesomeIcon icon={faLinkedin} className="icon-hover" />
+          <a
+            href="https://www.linkedin.com/in/phanthakarn-plukpanya-358863193/"
+            target="_blank"
+          >
+            <FontAwesomeIcon icon={faLinkedin} className="icon-hover" />
+          </a>
         </li>
         <li>
-          <FontAwesomeIcon icon={faGithub} className="icon-hover" />
+          <a href="https://github.com/phanthakarnp1997" target="_blank">
+            <FontAwesomeIcon icon={faGithub} className="icon-hover" />
+          </a>
         </li>
       </ul>
     </div>
