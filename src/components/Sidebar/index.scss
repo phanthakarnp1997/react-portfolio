@@ -12,6 +12,11 @@ $nav-mobile-background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: left 0.3s ease;
+
+  &.open {
+    left: 0;
+  }
 }
 
 .text-logo {
@@ -74,18 +79,30 @@ $nav-mobile-background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     background: transparent;
     flex-direction: column;
     align-items: start;
+    opacity: 0.98;
     .menu {
       display: flex;
     }
+    &.nav-bar.open {
+      width: 300px;
+      background: $nav-mobile-background;
+    }
   }
   .nav-icon {
-    flex-direction: column;
-    width: 100%;
+    display: none;
+    &.nav-icon.open {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
   }
   .nav-social {
-    display: flex;
-    gap: 20px;
-    flex-direction: row;
+    display: none;
+    &.nav-social.open {
+      display: flex;
+      gap: 20px;
+      flex-direction: row;
+    }
   }
   .hamburger-icon {
     display: flex;
