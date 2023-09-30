@@ -1,4 +1,6 @@
 $secondary-color: #f9f871;
+$nav-mobile-background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  #00566c;
 
 .nav-bar {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), #181818;
@@ -10,7 +12,6 @@ $secondary-color: #f9f871;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 500px;
 }
 
 .text-logo {
@@ -41,6 +42,10 @@ $secondary-color: #f9f871;
   padding: 0.5em;
 }
 
+.hamburger-icon {
+  display: none;
+}
+
 .icon-hover {
   transition: transform 250ms;
   span {
@@ -57,6 +62,37 @@ $secondary-color: #f9f871;
       display: inline;
       font-size: 1rem;
       letter-spacing: 1.5px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1045px) {
+  .nav-bar {
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: transparent;
+    flex-direction: column;
+    align-items: start;
+    .menu {
+      display: flex;
+    }
+  }
+  .nav-icon {
+    flex-direction: column;
+    width: 100%;
+  }
+  .nav-social {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+  }
+  .hamburger-icon {
+    display: flex;
+    color: #fff;
+    flex-direction: row;
+    &:hover {
+      color: $secondary-color;
     }
   }
 }
