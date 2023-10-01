@@ -84,7 +84,7 @@ $nav-mobile-background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
       display: flex;
     }
     &.nav-bar.open {
-      width: 300px;
+      width: 30rem;
       background: $nav-mobile-background;
     }
   }
@@ -94,6 +94,8 @@ $nav-mobile-background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
       display: flex;
       flex-direction: column;
       width: 100%;
+      align-items: start;
+      padding-left: 5rem;
     }
   }
   .nav-social {
@@ -110,6 +112,30 @@ $nav-mobile-background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     flex-direction: row;
     &:hover {
       color: $secondary-color;
+    }
+  }
+  .icon-hover {
+    display: flex;
+    gap: 20px;
+    color: #fff;
+    svg {
+      width: 50px;
+    }
+    span {
+      display: inline;
+      font-size: 2rem;
+      letter-spacing: 1.5px;
+    }
+    &:hover {
+      transform: none;
+      svg {
+        display: inline;
+      }
+      span {
+        display: inline;
+        font-size: 2rem;
+        letter-spacing: 1.5px;
+      }
     }
   }
 }
