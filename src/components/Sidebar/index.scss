@@ -81,6 +81,9 @@ $nav-mobile-background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     align-items: start;
     opacity: 0.98;
     .menu {
+      p {
+        display: none;
+      }
       display: flex;
     }
     &.nav-bar.open {
