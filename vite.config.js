@@ -8,4 +8,5 @@ export default defineConfig({
       include: "**/*.jsx",
     }),
   ],
+  base: "/react-portfolio/",
 });
