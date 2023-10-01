@@ -148,6 +148,16 @@
   animation: sf-fly-by-3 5s linear infinite;
 }
 
+@media only screen and (max-width: 880px) {
+  .text-zone {
+    &:before {
+      line-height: 5px;
+    }
+    &:after {
+      line-height: 5px;
+    }
+  }
+}
 @media only screen and (max-width: 730px) {
   .tags {
     left: 50px;

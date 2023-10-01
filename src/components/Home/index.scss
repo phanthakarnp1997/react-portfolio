@@ -99,9 +99,28 @@
 .greeting-zone {
   left: 15%;
 }
+@media only screen and (max-width: 1830px) {
+  .image-zone {
+    left: 60%;
+  }
+}
+@media only screen and (max-width: 1410px) {
+  .image-zone {
+    top: 85%;
+    left: 65%;
+    img {
+      width: 350px;
+      height: 350px;
+    }
+  }
+}
 @media only screen and (max-width: 1045px) {
   .image-zone {
-    left: 35%;
+    left: 70%;
+    img {
+      width: 250px;
+      height: 250px;
+    }
   }
   .greeting-zone {
     width: 100%;
@@ -114,19 +133,14 @@
     left: 20%;
   }
   .image-zone {
-    left: 30%;
-    .greeting-zone {
-      width: 100%;
-    }
+    top: 30%;
+    left: 60%;
   }
 }
 
 @media only screen and (max-width: 880px) {
   .information {
     font-size: 4rem;
-  }
-  .image-zone {
-    left: 35%;
   }
   .greeting-zone {
     width: 100%;
@@ -140,47 +154,15 @@
   .description {
     font-size: 1.3rem;
   }
-  .image-zone {
-    left: 30%;
-  }
-  .greeting-zone {
-    width: 100%;
-  }
 }
-
-@media only screen and (max-width: 730px) {
-  .information {
-    font-size: 3rem;
-  }
-  .description {
-    font-size: 1.3rem;
-  }
+@media only screen and (max-width: 665px) {
   .image-zone {
-    top: 30%;
-    left: 55%;
-    img {
-      width: 250px;
-      height: 250px;
-    }
-  }
-  .greeting-zone {
-    width: 100%;
+    left: 50%;
   }
 }
 @media only screen and (max-width: 615px) {
-  .information {
-    font-size: 3rem;
-  }
   .description {
     font-size: 1rem;
-  }
-  .image-zone {
-    top: 30%;
-    left: 55%;
-    img {
-      width: 250px;
-      height: 250px;
-    }
   }
   .greeting-zone {
     width: 70%;
@@ -190,38 +172,16 @@
   .information {
     font-size: 2.5rem;
   }
-  .description {
-    font-size: 1rem;
-  }
   .image-zone {
-    top: 30%;
-    left: 55%;
     img {
-      width: 250px;
-      height: 250px;
+      width: 150px;
+      height: 150px;
     }
-  }
-  .greeting-zone {
-    width: 70%;
   }
 }
 @media only screen and (max-width: 440px) {
   .information {
     font-size: 2rem;
-  }
-  .description {
-    font-size: 1rem;
-  }
-  .image-zone {
-    top: 30%;
-    left: 30%;
-    img {
-      width: 250px;
-      height: 250px;
-    }
-  }
-  .greeting-zone {
-    width: 70%;
   }
 }
 @media only screen and (max-width: 380px) {
@@ -232,14 +192,6 @@
     font-size: 1rem;
   }
   .image-zone {
-    top: 30%;
-    left: 30%;
-    img {
-      width: 250px;
-      height: 250px;
-    }
-  }
-  .greeting-zone {
-    width: 70%;
+    left: 45%;
   }
 }
