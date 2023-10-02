@@ -195,3 +195,21 @@
     left: 45%;
   }
 }
+@media only screen and (max-height: 780px) {
+  .greeting-zone {
+    top: 75%;
+  }
+}
+@media only screen and (max-height: 540px) {
+  .greeting-zone {
+    left: 20%;
+  }
+}
+@media only screen and (max-height: 535px) {
+  .greeting-zone {
+    left: 55%;
+  }
+  .image-zone {
+    top: 40%;
+  }
+}
