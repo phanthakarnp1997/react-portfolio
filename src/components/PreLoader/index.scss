@@ -13,3 +13,12 @@
     height: 500px;
   }
 }
+
+@media only screen and (max-width: 500px) {
+  .loading-container {
+    .loading-animation {
+      width: 250px;
+      height: 250px;
+    }
+  }
+}

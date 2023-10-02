@@ -1,5 +1,6 @@
 import "./index.scss";
 import React from "react";
+import withLoader from "../../utils/withLoader";
 
 function About() {
   return (
@@ -11,4 +12,4 @@ function About() {
   );
 }
 
-export default About;
+export default withLoader(About);

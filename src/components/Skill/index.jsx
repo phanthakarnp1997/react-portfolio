@@ -1,7 +1,8 @@
+import withLoader from "../../utils/withLoader";
 import "./index.scss";
 import React from "react";
 
-export default function Skill() {
+function Skill() {
   return (
     <>
       <div className="page-header">
@@ -10,3 +11,5 @@ export default function Skill() {
     </>
   );
 }
+
+export default withLoader(Skill);

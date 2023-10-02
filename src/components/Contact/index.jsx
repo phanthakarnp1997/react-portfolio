@@ -1,7 +1,8 @@
 import "./index.scss";
 import React from "react";
+import withLoader from "../../utils/withLoader";
 
-export default function Contact() {
+function Contact() {
   return (
     <>
       <div className="page-header">
@@ -10,3 +11,5 @@ export default function Contact() {
     </>
   );
 }
+
+export default withLoader(Contact);
