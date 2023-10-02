@@ -3,6 +3,7 @@ import HeroImage from "../../assets/rocket-ship.png";
 import React, { useState, useEffect } from "react";
 import AnimateText from "../AnimateText";
 import { TypeAnimation } from "react-type-animation";
+
 export default function Home() {
   const [letterClass, setLetterClass] = useState("text-animate");
 
@@ -24,22 +25,24 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="home-page">
-      <div className="wrapper">
-        <div className="text-zone information">
-          <AnimateText idx={5} letterClass={`${letterClass}`} text="Hi!" />
-          <AnimateText idx={10} letterClass={letterClass} text={name} />
-          <div>
-            <AnimateText idx={35} letterClass={letterClass} text={rolename} />
+    <>
+      <div className="home-page">
+        <div className="wrapper">
+          <div className="text-zone information">
+            <AnimateText idx={5} letterClass={`${letterClass}`} text="Hi!" />
+            <AnimateText idx={10} letterClass={letterClass} text={name} />
+            <div>
+              <AnimateText idx={35} letterClass={letterClass} text={rolename} />
+            </div>
+          </div>
+          <div className="greeting-zone description">
+            {typingIntroduceComponent}
           </div>
         </div>
-        <div className="greeting-zone description">
-          {typingIntroduceComponent}
+        <div className="image-zone">
+          <img src={HeroImage} alt="hero-image" />
         </div>
       </div>
-      <div className="image-zone">
-        <img src={HeroImage} alt="hero-image" />
-      </div>
-    </div>
+    </>
   );
 }
