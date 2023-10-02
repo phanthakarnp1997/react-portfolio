@@ -14,6 +14,11 @@ $nav-mobile-background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
   align-items: center;
   transition: left 0.3s ease;
 
+  a {
+    text-decoration: none;
+    color: #444;
+  }
+
   &.open {
     left: 0;
   }

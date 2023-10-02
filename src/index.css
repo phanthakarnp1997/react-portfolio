@@ -24,6 +24,12 @@ body {
   user-select: none;
 }
 
+.page-header {
+  width: 100%;
+  color: #fff;
+  font-size: 5rem;
+}
+
 @keyframes sf-fly-by-1 {
   from {
     transform: translateZ(-600px);

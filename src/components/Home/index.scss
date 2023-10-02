@@ -97,9 +97,13 @@
 }
 .text-zone,
 .greeting-zone {
+  top: 40%;
   left: 15%;
 }
-@media only screen and (max-width: 1830px) {
+.greeting-zone {
+  top: 60%;
+}
+@media only screen and (max-width: 1955px) {
   .image-zone {
     left: 60%;
   }
@@ -107,6 +111,23 @@
 @media only screen and (max-width: 1410px) {
   .image-zone {
     top: 85%;
+    left: 65%;
+    img {
+      width: 350px;
+      height: 350px;
+    }
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .text-zone {
+    top: 30%;
+    left: 15%;
+  }
+  .greeting-zone {
+    top: 50% !important;
+  }
+  .image-zone {
+    top: 55%;
     left: 65%;
     img {
       width: 350px;
@@ -133,7 +154,7 @@
     left: 20%;
   }
   .image-zone {
-    top: 30%;
+    top: 15%;
     left: 60%;
   }
 }
@@ -141,6 +162,12 @@
 @media only screen and (max-width: 880px) {
   .information {
     font-size: 4rem;
+  }
+  .image-zone {
+    img {
+      width: 180px;
+      height: 180px;
+    }
   }
   .greeting-zone {
     width: 100%;

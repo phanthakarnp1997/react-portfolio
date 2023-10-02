@@ -24,7 +24,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="container home-page">
+    <div className="home-page">
       <div className="wrapper">
         <div className="text-zone information">
           <AnimateText idx={5} letterClass={`${letterClass}`} text="Hi!" />

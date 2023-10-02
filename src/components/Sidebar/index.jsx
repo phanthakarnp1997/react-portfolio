@@ -14,6 +14,7 @@ import {
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
+  const baseNavigate = "/react-portfolio";
 
   let rootRef = useRef();
 
@@ -37,7 +38,7 @@ export default function Sidebar() {
   return (
     <div className={`nav-bar ${isOpen ? "open" : ""}`} ref={rootRef}>
       <div className="menu">
-        <Link to="/">
+        <Link to="/react-portfolio">
           <p className="text-logo">P</p>
         </Link>
         <FontAwesomeIcon
@@ -49,26 +50,36 @@ export default function Sidebar() {
         />
       </div>
       <nav className={`nav-icon ${isOpen ? "open" : ""}`}>
-        <div className="icon-hover">
-          <FontAwesomeIcon icon={faHouse} />
-          <span>Home</span>
-        </div>
-        <div className="icon-hover">
-          <FontAwesomeIcon icon={faAddressCard} />
-          <span>About Me</span>
-        </div>
-        <div className="icon-hover">
-          <FontAwesomeIcon icon={faTimeline} />
-          <span>Experience</span>
-        </div>
-        <div className="icon-hover">
-          <FontAwesomeIcon icon={faLightbulb} />
-          <span>Skill</span>
-        </div>
-        <div className="icon-hover">
-          <FontAwesomeIcon icon={faEnvelope} />
-          <span>Contact</span>
-        </div>
+        <Link to={baseNavigate}>
+          <div className="icon-hover">
+            <FontAwesomeIcon icon={faHouse} />
+            <span>Home</span>
+          </div>
+        </Link>
+        <Link to={`${baseNavigate}/about`}>
+          <div className="icon-hover">
+            <FontAwesomeIcon icon={faAddressCard} />
+            <span>About Me</span>
+          </div>
+        </Link>
+        <Link to={`${baseNavigate}/experience`}>
+          <div className="icon-hover">
+            <FontAwesomeIcon icon={faTimeline} />
+            <span>Experience</span>
+          </div>
+        </Link>
+        <Link to={`${baseNavigate}/skill`}>
+          <div className="icon-hover">
+            <FontAwesomeIcon icon={faLightbulb} />
+            <span>Skill</span>
+          </div>
+        </Link>
+        <Link to={`${baseNavigate}/contact`}>
+          <div className="icon-hover">
+            <FontAwesomeIcon icon={faEnvelope} />
+            <span>Contact</span>
+          </div>
+        </Link>
       </nav>
       <ul className={`nav-social ${isOpen ? "open" : ""}`}>
         <li>
