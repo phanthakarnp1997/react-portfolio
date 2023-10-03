@@ -10,11 +10,6 @@
   color: #ffffff;
 }
 
-.wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
 .information {
   width: 100%;
   font-size: 5rem;
@@ -31,6 +26,7 @@
 }
 
 .greeting-zone {
+  text-align: justify;
   position: absolute;
   left: 10%;
   top: 68%;

@@ -1,6 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Inter&family=Red+Hat+Display:wght@500;700;900&family=Roboto:wght@500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=JetBrains+Mono:wght@100&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap");
 @import "animate.css";
 * {
   margin: 0;
@@ -13,7 +12,7 @@ html {
 }
 
 body {
-  font-family: "Roboto", "Oswald";
+  font-family: "Poppins", sans-serif;
   background-color: #022c43;
   color: #444;
   -webkit-user-select: none;
@@ -28,6 +27,11 @@ body {
   width: 100%;
   color: #fff;
   font-size: 5rem;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 @keyframes sf-fly-by-1 {
