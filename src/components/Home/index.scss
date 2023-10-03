@@ -165,8 +165,8 @@
   }
   .image-zone {
     img {
-      width: 180px;
-      height: 180px;
+      width: 150px;
+      height: 150px;
     }
   }
   .greeting-zone {
@@ -238,5 +238,16 @@
   }
   .image-zone {
     top: 40%;
+  }
+}
+@media (max-height: 564px) {
+  .greeting-zone {
+    top: 65% !important;
+  }
+}
+
+@media (max-width: 1400px) {
+  .greeting-zone {
+    top: 55% !important;
   }
 }
