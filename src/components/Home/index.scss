@@ -12,7 +12,7 @@
 
 .information {
   width: 100%;
-  font-size: 5rem;
+  font-size: 4rem;
   div:nth-child(2) {
     span:nth-child(4) {
       color: #f9f871;
@@ -28,10 +28,10 @@
 .greeting-zone {
   text-align: justify;
   position: absolute;
-  left: 10%;
-  top: 68%;
+  left: 15%;
+  top: 65%;
   transform: translateY(-50%);
-  width: 35%;
+  width: 50%;
   vertical-align: middle;
   display: table-cell;
   max-height: 90%;
@@ -74,176 +74,118 @@
 
 .image-zone {
   position: absolute;
-  left: 50%;
-  top: 60%;
-  transform: translateY(-50%);
-  width: 35%;
+  transform: translate(50%, -50%);
   vertical-align: middle;
   display: table-cell;
   max-height: 90%;
   z-index: -1;
   img {
-    width: 500px;
-    height: 500px;
+    width: 100%;
+    height: auto;
     -webkit-animation: spin 20s linear infinite;
     -moz-animation: spin 20s linear infinite;
     animation: spin 20s linear infinite;
     filter: brightness(70%);
   }
 }
-.text-zone,
-.greeting-zone {
-  top: 40%;
-  left: 15%;
-}
-.greeting-zone {
-  top: 60%;
-}
-@media only screen and (max-width: 1955px) {
-  .image-zone {
-    left: 60%;
-  }
-}
-@media only screen and (max-width: 1410px) {
-  .image-zone {
-    top: 85%;
-    left: 65%;
-    img {
-      width: 350px;
-      height: 350px;
-    }
-  }
-}
-@media only screen and (max-width: 1400px) {
+
+@media screen and (min-width: 280px) {
   .text-zone {
+    font-size: 1.2rem;
     top: 30%;
-    left: 15%;
   }
   .greeting-zone {
-    top: 50% !important;
-  }
-  .image-zone {
+    font-size: 1rem;
+    width: 80%;
     top: 55%;
-    left: 65%;
-    img {
-      width: 350px;
-      height: 350px;
-    }
-  }
-}
-@media only screen and (max-width: 1045px) {
-  .image-zone {
-    left: 70%;
-    img {
-      width: 250px;
-      height: 250px;
-    }
-  }
-  .greeting-zone {
-    width: 100%;
-  }
-}
-
-@media only screen and (max-width: 900px) {
-  .text-zone,
-  .greeting-zone {
-    left: 20%;
   }
   .image-zone {
-    top: 15%;
-    left: 60%;
-  }
-}
-
-@media only screen and (max-width: 880px) {
-  .information {
-    font-size: 4rem;
-  }
-  .image-zone {
-    img {
-      width: 150px;
-      height: 150px;
-    }
-  }
-  .greeting-zone {
-    width: 100%;
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  .information {
-    font-size: 3rem;
-  }
-  .description {
-    font-size: 1.3rem;
-  }
-}
-@media only screen and (max-width: 665px) {
-  .image-zone {
-    left: 50%;
-  }
-}
-@media only screen and (max-width: 615px) {
-  .description {
-    font-size: 1rem;
-  }
-  .greeting-zone {
-    width: 70%;
-  }
-}
-@media only screen and (max-width: 515px) {
-  .information {
-    font-size: 2.5rem;
-  }
-  .image-zone {
-    img {
-      width: 150px;
-      height: 150px;
-    }
-  }
-}
-@media only screen and (max-width: 440px) {
-  .information {
-    font-size: 2rem;
-  }
-}
-@media only screen and (max-width: 380px) {
-  .information {
-    font-size: 1.4rem;
-  }
-  .description {
-    font-size: 1rem;
-  }
-  .image-zone {
+    width: 100px;
+    height: 100px;
+    top: 42.5%;
     left: 45%;
   }
 }
-@media only screen and (max-height: 780px) {
-  .greeting-zone {
-    top: 75%;
+
+// Small devices (landscape phones, 576px and up)
+@media screen and (min-width: 576px) {
+  .text-zone {
+    font-size: 2rem;
+    left: 15%;
+    top: 30%;
   }
-}
-@media only screen and (max-height: 540px) {
   .greeting-zone {
-    left: 20%;
-  }
-}
-@media only screen and (max-height: 535px) {
-  .greeting-zone {
-    left: 55%;
+    font-size: 1.4rem;
+    width: 80%;
+    left: 15%;
+    top: 55%;
   }
   .image-zone {
-    top: 40%;
+    width: 200px;
+    height: 200px;
+    top: 25%;
+    left: 45%;
   }
 }
-@media (max-height: 564px) {
+// Medium devices (tablets, 768px and up)
+@media screen and (min-width: 768px) {
+  .text-zone {
+    font-size: 3rem;
+    left: 20%;
+    top: 30%;
+  }
   .greeting-zone {
-    top: 65% !important;
+    font-size: 1.8rem;
+    width: 80%;
+    left: 20%;
+    top: 55%;
+  }
+  .image-zone {
+    width: 180px;
+    height: 180px;
+    top: 35%;
+    left: 65%;
   }
 }
 
-@media (max-width: 1400px) {
+// Large devices (desktops, 992px and up)
+@media screen and (min-width: 992px) {
+  .text-zone {
+    font-size: 3rem;
+    left: 15%;
+    top: 30%;
+  }
   .greeting-zone {
-    top: 55% !important;
+    font-size: 1.8rem;
+    width: 80%;
+    left: 15%;
+    top: 55%;
+  }
+  .image-zone {
+    width: 280px;
+    height: 280px;
+    top: 50%;
+    left: 55%;
+  }
+}
+
+//(large desktops, 1200px and up)
+@media screen and (min-width: 1200px) {
+  .text-zone {
+    font-size: 3rem;
+    left: 15%;
+    top: 30%;
+  }
+  .greeting-zone {
+    font-size: 1.8rem;
+    width: 80%;
+    left: 15%;
+    top: 55%;
+  }
+  .image-zone {
+    width: 400px;
+    height: 400px;
+    top: 50%;
+    left: 45%;
   }
 }
