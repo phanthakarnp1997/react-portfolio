@@ -29,7 +29,11 @@ function About() {
           <div className="content-zone">{aboutText}</div>
         </div>
         <div className="animation-section">
-          <Lottie animationData={developerAnimation} loop={true} />
+          <Lottie
+            className="lottie-image"
+            animationData={developerAnimation}
+            loop={true}
+          />
         </div>
       </div>
     </>
