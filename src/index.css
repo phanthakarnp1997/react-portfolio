@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font: 300 11px/1.4 "Poppins", sans-serif;
   background-color: #022c43;
   color: #444;
   -webkit-user-select: none;
@@ -21,17 +21,19 @@ body {
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
+  overflow: hidden;
+  display: block;
 }
 
-.page-header {
-  width: 100%;
-  color: #fff;
-  font-size: 5rem;
+.dashboard {
+  margin-top: 200px;
+  margin-left: 200px;
 }
 
-.wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+@media screen and (max-width: 1200px) {
+  body {
+    overflow: visible;
+  }
 }
 
 @keyframes sf-fly-by-1 {

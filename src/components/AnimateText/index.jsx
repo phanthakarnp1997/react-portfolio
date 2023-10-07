@@ -6,7 +6,7 @@ export default function AnimateText({ letterClass, text, idx }) {
   const characters = text.split("");
 
   return (
-    <div>
+    <>
       {characters.map((char, charIndex) => {
         // Check if the character is empty (space)
         const isSpace = char === " ";
@@ -26,6 +26,6 @@ export default function AnimateText({ letterClass, text, idx }) {
           return "\u00A0"; // Unicode non-breaking space character
         }
       })}
-    </div>
+    </>
   );
 }

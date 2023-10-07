@@ -16,7 +16,6 @@
   }
   .text-animate-hover._#{$i} {
     &:hover {
-      min-width: 10px;
       display: inline-block;
       animation-fill-mode: both;
       animation: rubberBand 1s infinite;

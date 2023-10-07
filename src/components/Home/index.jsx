@@ -7,8 +7,10 @@ import { TypeAnimation } from "react-type-animation";
 export default function Home() {
   const [letterClass, setLetterClass] = useState("text-animate");
 
-  const name = "I'm Phanthakarn Plukpanya";
-  const rolename = "Software Developer";
+  const firstName = "Phanthakarn";
+  const lastName = "Plukpanya";
+  const jobName = "Software";
+  const jobName2 = "Developer";
   const textIntroduce = `Greetings, I am Dew, an experienced software developer with a passion
   for problem-solving. I am eager to expand my knowledge of cutting-edge
   technologies and embrace fresh challenges to further enhance my
@@ -26,18 +28,31 @@ export default function Home() {
 
   return (
     <>
-      <div className="home-page">
-        <div className="wrapper">
-          <div className="text-zone information">
-            <AnimateText idx={5} letterClass={`${letterClass}`} text="Hi!" />
-            <AnimateText idx={10} letterClass={letterClass} text={name} />
+      <div className="container home-page">
+        <div className="text-zone">
+          <div className="text-introduce">
+            <AnimateText idx={5} letterClass={`${letterClass}`} text="Hi !" />
+            <br />
             <div>
-              <AnimateText idx={35} letterClass={letterClass} text={rolename} />
+              <AnimateText
+                idx={10}
+                letterClass={letterClass}
+                text={`${firstName}`}
+              />
+              <br />
+              <AnimateText
+                idx={10}
+                letterClass={letterClass}
+                text={`${lastName}`}
+              />
+            </div>
+            <div>
+              <AnimateText idx={35} letterClass={letterClass} text={jobName} />
+              <br />
+              <AnimateText idx={35} letterClass={letterClass} text={jobName2} />
             </div>
           </div>
-          <div className="greeting-zone description">
-            {typingIntroduceComponent}
-          </div>
+          <h2>{typingIntroduceComponent}</h2>
         </div>
         <div className="image-zone">
           <img src={HeroImage} alt="hero-image" />

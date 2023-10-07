@@ -1,191 +1,156 @@
 .home-page {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  letter-spacing: 1.5px;
-  color: #ffffff;
-}
+  will-change: transform;
+  .text-zone {
+    position: absolute;
+    left: 15%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40%;
+    max-height: 90%;
+  }
 
-.information {
-  width: 100%;
-  font-size: 4rem;
-  div:nth-child(2) {
-    span:nth-child(4) {
-      color: #f9f871;
+  .text-introduce {
+    color: #fff;
+    font-size: 54px;
+    line-height: 53px;
+    margin: 0;
+    font-weight: 400;
+    width: 100vw;
+
+    div:nth-child(2) {
+      span:nth-child(4) {
+        color: #ffd700;
+      }
+    }
+    div:nth-child(3) {
+      span:nth-child(9) {
+        color: #ffd700;
+      }
+    }
+
+    &:before {
+      content: "<h1>";
+      color: #ffd700;
+      font-size: 18px;
+      position: absolute;
+      margin-top: -40px;
+      left: -15px;
+      opacity: 0.6;
+    }
+
+    &:after {
+      content: "<h1/>";
+      color: #ffd700;
+      font-size: 18px;
+      position: absolute;
+      margin-top: 18px;
+      animation: fadeIn 1s 1.7s backwards;
+      opacity: 0.6;
     }
   }
-  div:nth-child(3) {
-    span:nth-child(9) {
-      color: #f9f871;
+
+  h2 {
+    color: #8d8d8d;
+    margin-top: 80px;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: sans-serif;
+    letter-spacing: 3px;
+    animation: fadeIn 1s 1.8s backwards;
+  }
+
+  .image-zone {
+    position: relative;
+    left: 60%;
+    top: 10%;
+    z-index: -1;
+    img {
+      width: 48rem;
+      height: 48rem;
+      -webkit-animation: spin 20s linear infinite;
+      -moz-animation: spin 20s linear infinite;
+      animation: spin 20s linear infinite;
+      filter: brightness(50%);
     }
   }
 }
 
-.greeting-zone {
-  text-align: justify;
-  position: absolute;
-  left: 15%;
-  top: 65%;
-  transform: translateY(-50%);
-  width: 50%;
-  vertical-align: middle;
-  display: table-cell;
-  max-height: 90%;
-  &:before {
-    content: "<greeting>";
-    color: #ffd700;
-    font-size: 18px;
-    position: absolute;
-    margin-top: -20px;
-    left: -10px;
-    opacity: 0.6;
-    line-height: 10px;
+@media screen and (max-width: 1200px) {
+  .tags,
+  .home-page .text-introduce:before,
+  .home-page .text-introduce:after {
+    display: none;
   }
 
-  &:after {
-    content: "<greeting/>";
-    color: #ffd700;
-    font-size: 18px;
-    line-height: 10px;
-    position: absolute;
-    left: -30px;
-    bottom: -20px;
-    margin-left: 20px;
-    opacity: 0.6;
+  .home-page {
+    .image-zone {
+      position: absolute;
+      top: 12%;
+      left: 50%;
+      img {
+        width: 32rem;
+        height: 32rem;
+      }
+    }
   }
-}
 
-.description {
-  display: inline-block;
-  vertical-align: top;
-  font-family: "JetBrains Mono", monospace;
-  font-size: 1.5rem;
-  opacity: 0;
-  animation: fadeInLeft;
-  animation-duration: 1s;
-  animation-delay: 5s;
-  animation-fill-mode: forwards;
-  max-width: 500px;
-}
-
-.image-zone {
-  position: absolute;
-  transform: translate(50%, -50%);
-  vertical-align: middle;
-  display: table-cell;
-  max-height: 90%;
-  z-index: -1;
-  img {
+  .home-page .text-zone {
+    position: initial;
     width: 100%;
-    height: auto;
-    -webkit-animation: spin 20s linear infinite;
-    -moz-animation: spin 20s linear infinite;
-    animation: spin 20s linear infinite;
-    filter: brightness(70%);
+    transform: none;
+    padding: 10rem;
+    box-sizing: border-box;
   }
 }
-
-@media screen and (min-width: 280px) {
-  .text-zone {
-    font-size: 1.2rem;
-    top: 30%;
-  }
-  .greeting-zone {
-    font-size: 1rem;
-    width: 80%;
-    top: 55%;
-  }
-  .image-zone {
-    width: 100px;
-    height: 100px;
-    top: 42.5%;
-    left: 45%;
-  }
-}
-
-// Small devices (landscape phones, 576px and up)
-@media screen and (min-width: 576px) {
-  .text-zone {
-    font-size: 2rem;
-    left: 15%;
-    top: 30%;
-  }
-  .greeting-zone {
-    font-size: 1.4rem;
-    width: 80%;
-    left: 15%;
-    top: 55%;
-  }
-  .image-zone {
-    width: 200px;
-    height: 200px;
-    top: 25%;
-    left: 45%;
+@media screen and (max-width: 1024px) {
+  .home-page {
+    .image-zone {
+      img {
+        width: 32rem;
+        height: 32rem;
+      }
+    }
+    .text-zone {
+      .text-introduce {
+        font-size: 5rem;
+        word-wrap: break-word;
+      }
+    }
+    h2 {
+      margin-top: 3.5rem;
+    }
   }
 }
-// Medium devices (tablets, 768px and up)
-@media screen and (min-width: 768px) {
-  .text-zone {
-    font-size: 3rem;
-    left: 20%;
-    top: 30%;
+@media screen and (max-width: 768px) {
+  .home-page .text-zone {
+    position: initial;
+    width: 100%;
+    padding: 5rem;
+    .text-introduce {
+      margin-top: 4rem;
+      font-size: 5rem;
+      line-height: 4.5rem;
+      width: 100%;
+    }
   }
-  .greeting-zone {
-    font-size: 1.8rem;
-    width: 80%;
-    left: 20%;
-    top: 55%;
-  }
-  .image-zone {
-    width: 180px;
-    height: 180px;
-    top: 35%;
-    left: 65%;
-  }
-}
-
-// Large devices (desktops, 992px and up)
-@media screen and (min-width: 992px) {
-  .text-zone {
-    font-size: 3rem;
-    left: 15%;
-    top: 30%;
-  }
-  .greeting-zone {
-    font-size: 1.8rem;
-    width: 80%;
-    left: 15%;
-    top: 55%;
-  }
-  .image-zone {
-    width: 280px;
-    height: 280px;
-    top: 50%;
-    left: 55%;
+  .home-page {
+    .image-zone {
+      img {
+        width: 28rem;
+        height: 28rem;
+      }
+    }
   }
 }
-
-//(large desktops, 1200px and up)
-@media screen and (min-width: 1200px) {
-  .text-zone {
-    font-size: 3rem;
-    left: 15%;
-    top: 30%;
-  }
-  .greeting-zone {
-    font-size: 1.8rem;
-    width: 80%;
-    left: 15%;
-    top: 55%;
-  }
-  .image-zone {
-    width: 400px;
-    height: 400px;
-    top: 50%;
-    left: 45%;
+@media screen and (max-width: 480px) {
+  .home-page .text-zone {
+    height: 100vh;
+    overflow: auto;
+    .text-introduce {
+      margin-top: 4rem;
+      font-size: 2.7rem;
+      line-height: 2.7rem;
+      width: 100%;
+    }
   }
 }
