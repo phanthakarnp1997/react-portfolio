@@ -24,16 +24,16 @@ function Experience() {
             idx={1}
           />
         </h1>
-        <div className="text-zone">
+        <div className="timeline">
           <VerticalTimeline>
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
-              contentStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+              contentStyle={{ background: "#022C43", color: "#f9f871" }}
               contentArrowStyle={{
-                borderRight: "7px solid  rgb(33, 150, 243)",
+                borderRight: "7px solid  #022C43",
               }}
               date="2019 - present"
-              iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+              iconStyle={{ background: "#022C43", color: "#fff" }}
               icon={<FontAwesomeIcon icon={faBriefcase} />}
             >
               <h3 className="vertical-timeline-element-title">Programmer</h3>
@@ -44,12 +44,12 @@ function Experience() {
             </VerticalTimelineElement>
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
-              contentStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+              contentStyle={{ background: "#022C43", color: "#f9f871" }}
               contentArrowStyle={{
-                borderRight: "7px solid  rgb(33, 150, 243)",
+                borderRight: "7px solid  #022C43",
               }}
               date="Jul 2018 - Oct 2018"
-              iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+              iconStyle={{ background: "#022C43", color: "#fff" }}
               icon={<FontAwesomeIcon icon={faBriefcase} />}
             >
               <h3 className="vertical-timeline-element-title">
@@ -62,12 +62,12 @@ function Experience() {
             </VerticalTimelineElement>
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
-              contentStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+              contentStyle={{ background: "#022C43", color: "#f9f871" }}
               contentArrowStyle={{
-                borderRight: "7px solid  rgb(33, 150, 243)",
+                borderRight: "7px solid  #022C43",
               }}
               date="Sep 2016 - Mar 2019"
-              iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+              iconStyle={{ background: "#022C43", color: "#fff" }}
               icon={<FontAwesomeIcon icon={faGraduationCap} />}
             >
               <h3 className="vertical-timeline-element-title">
