@@ -52,6 +52,8 @@
 }
 
 .container.about-page {
+  left: 15%;
+  top: 15%;
   h1 {
     font-size: 53px;
     color: #ffd700;
@@ -104,9 +106,10 @@
   }
 
   .text-zone {
+    font-size: 1.8rem;
+    color: #fff;
     position: absolute;
-    left: 10%;
-    top: 50%;
+    top: 45%;
     transform: translateY(-50%);
     width: 35%;
     vertical-align: middle;

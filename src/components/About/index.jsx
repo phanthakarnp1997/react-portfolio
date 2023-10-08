@@ -17,23 +17,19 @@ function About() {
 
   return (
     <>
-      <div className="page-container">
-        <div className="page-header">
-          <div className="text-zone text-about">
+      <div className="container about-page">
+        <div>
+          <h1>
             <AnimateText
-              letterClass=" header text-animate-hover"
+              letterClass="text-animate-hover"
               text="About Me"
               idx={1}
             />
-          </div>
-          <div className="content-zone">{aboutText}</div>
+          </h1>
+          <div className="text-zone">{aboutText}</div>
         </div>
-        <div className="animation-section">
-          <Lottie
-            className="lottie-image"
-            animationData={developerAnimation}
-            loop={true}
-          />
+        <div className="image-zone">
+          <Lottie animationData={developerAnimation} />
         </div>
       </div>
     </>

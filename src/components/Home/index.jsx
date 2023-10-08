@@ -41,15 +41,15 @@ export default function Home() {
               />
               <br />
               <AnimateText
-                idx={10}
+                idx={15}
                 letterClass={letterClass}
                 text={`${lastName}`}
               />
             </div>
             <div>
-              <AnimateText idx={35} letterClass={letterClass} text={jobName} />
+              <AnimateText idx={20} letterClass={letterClass} text={jobName} />
               <br />
-              <AnimateText idx={35} letterClass={letterClass} text={jobName2} />
+              <AnimateText idx={25} letterClass={letterClass} text={jobName2} />
             </div>
           </div>
           <h2>{typingIntroduceComponent}</h2>
