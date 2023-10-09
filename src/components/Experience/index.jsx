@@ -24,7 +24,7 @@ function Experience() {
             idx={1}
           />
         </h1>
-        <div className="timeline">
+        <div className="timeline-container">
           <VerticalTimeline>
             <VerticalTimelineElement
               className="vertical-timeline-element--work"

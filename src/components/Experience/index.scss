@@ -1,21 +1,28 @@
 .container.experience-page {
-  .timeline {
-    width: 85vw;
-    height: 55%;
-    overflow: auto;
-    opacity: 0.8;
-  }
+  //   border: 1px solid yellow;
+  position: initial;
+  margin-top: 5rem;
+  left: 10%;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100px;
+  width: 85%;
+  height: 90vh;
+}
+.timeline-container {
+  //   border: 1px solid blue;
+  padding: 1rem;
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
 }
 
 @media screen and (max-width: 1200px) {
   .container.experience-page {
+    padding: 1rem;
     h1 {
-      margin-left: 15rem;
-      margin-top: 5rem;
-    }
-    .timeline {
-      max-height: 40rem;
-      margin-left: 10rem;
+      margin-left: 5rem;
       margin-top: 5rem;
     }
   }
@@ -23,22 +30,16 @@
 @media screen and (max-width: 1024px) {
   .container.experience-page {
     h1 {
-      margin-left: 10rem;
-      font-size: 3.5rem;
-    }
-    .timeline {
       margin-left: 5rem;
+      font-size: 3.5rem;
     }
   }
 }
 @media screen and (max-width: 480px) {
   .container.experience-page {
     h1 {
-      margin-left: 8rem;
+      margin-left: 5rem;
       font-size: 2.5rem;
-    }
-    .timeline {
-      margin-left: 3rem;
     }
   }
 }
