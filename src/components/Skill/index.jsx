@@ -11,6 +11,8 @@ import {
 } from "../../data/skills-data";
 
 function Skill() {
+  const isAnimated = true;
+
   return (
     <>
       <div className="container skill-page">
@@ -19,10 +21,26 @@ function Skill() {
         </h1>
         <div className="skill-content">
           <div>
-            <SkillItems title={"Frontend"} skills={frontendData} />
-            <SkillItems title={"Backend"} skills={backendData} />
-            <SkillItems title={`Tools`} skills={toolSkills} />
-            <SkillItems title={"Database"} skills={databaseSkills} />
+            <SkillItems
+              isAnimated={isAnimated}
+              title={"Frontend"}
+              skills={frontendData}
+            />
+            <SkillItems
+              isAnimated={isAnimated}
+              title={"Backend"}
+              skills={backendData}
+            />
+            <SkillItems
+              isAnimated={isAnimated}
+              title={`Tools`}
+              skills={toolSkills}
+            />
+            <SkillItems
+              isAnimated={isAnimated}
+              title={"Database"}
+              skills={databaseSkills}
+            />
           </div>
         </div>
       </div>
