@@ -5,6 +5,7 @@
   width: 80%;
   .title {
     color: #fff;
+    width: 100%;
     font-size: 3.2rem !important;
   }
 
@@ -35,13 +36,21 @@
   }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   .container-skills {
     display: flex;
     flex-direction: column;
+    .items-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
     .title {
       text-align: center;
     }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .container-skills {
     .items-container {
       grid-template-columns: repeat(2, 1fr);
     }
