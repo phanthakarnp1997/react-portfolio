@@ -29,6 +29,7 @@
         margin-top: 6px;
         margin-bottom: 16px;
         resize: vertical;
+        color: #fff;
       }
       textarea {
         min-height: 150px;
@@ -49,6 +50,9 @@
         color: #363062;
       }
     }
+  }
+  .validate-message {
+    color: #dc3545;
   }
 }
 
