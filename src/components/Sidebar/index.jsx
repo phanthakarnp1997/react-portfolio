@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
 import "./index.scss";
-import { Link } from "react-router-dom";
+import React, { useEffect, useRef, useState } from "react";
+import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import {
@@ -13,17 +13,17 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { BASE_URL } from "../../utils/constant";
 
-export default function Sidebar() {
+function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  let rootRef = useRef();
+  const rootRef = useRef();
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
 
   useEffect(() => {
-    let handler = (e) => {
+    const handler = (e) => {
       if (isOpen && !rootRef.current.contains(e.target)) {
         setIsOpen(false);
       }
@@ -35,12 +35,60 @@ export default function Sidebar() {
     };
   }, [isOpen]);
 
+  const navLinks = [
+    {
+      to: BASE_URL,
+      icon: faHouse,
+      text: "Home",
+      isEnd: true,
+    },
+    {
+      to: `${BASE_URL}/about`,
+      icon: faAddressCard,
+      text: "About Me",
+      isEnd: false,
+    },
+    {
+      to: `${BASE_URL}/experience`,
+      icon: faTimeline,
+      text: "Experience",
+      isEnd: false,
+    },
+    {
+      to: `${BASE_URL}/skill`,
+      icon: faLightbulb,
+      text: "Skill",
+      isEnd: false,
+    },
+    {
+      to: `${BASE_URL}/contact`,
+      icon: faEnvelope,
+      text: "Contact",
+      isEnd: false,
+    },
+  ];
+
+  const socialLinks = [
+    {
+      href: "https://www.linkedin.com/in/phanthakarn-plukpanya-358863193/",
+      icon: faLinkedin,
+    },
+    {
+      href: "https://github.com/phanthakarnp1997",
+      icon: faGithub,
+    },
+  ];
+
   return (
     <div className={`nav-bar ${isOpen ? "open" : ""}`} ref={rootRef}>
       <div className="menu">
-        <Link to={BASE_URL}>
+        <NavLink
+          className={({ isActive }) => (isActive ? "navlink-active" : "")}
+          to={BASE_URL}
+          end
+        >
           <p className="text-logo">P</p>
-        </Link>
+        </NavLink>
         <FontAwesomeIcon
           icon={faBars}
           color="#ffd700"
@@ -50,52 +98,31 @@ export default function Sidebar() {
         />
       </div>
       <nav className={`nav-icon ${isOpen ? "open" : ""}`}>
-        <Link to={BASE_URL}>
-          <div className="icon-hover">
-            <FontAwesomeIcon icon={faHouse} />
-            <span>Home</span>
-          </div>
-        </Link>
-        <Link to={`${BASE_URL}/about`}>
-          <div className="icon-hover">
-            <FontAwesomeIcon icon={faAddressCard} />
-            <span>About Me</span>
-          </div>
-        </Link>
-        <Link to={`${BASE_URL}/experience`}>
-          <div className="icon-hover">
-            <FontAwesomeIcon icon={faTimeline} />
-            <span>Experience</span>
-          </div>
-        </Link>
-        <Link to={`${BASE_URL}/skill`}>
-          <div className="icon-hover">
-            <FontAwesomeIcon icon={faLightbulb} />
-            <span>Skill</span>
-          </div>
-        </Link>
-        <Link to={`${BASE_URL}/contact`}>
-          <div className="icon-hover">
-            <FontAwesomeIcon icon={faEnvelope} />
-            <span>Contact</span>
-          </div>
-        </Link>
+        {navLinks.map((link) => (
+          <NavLink
+            key={link.to}
+            className={({ isActive }) => (isActive ? "navlink-active" : "")}
+            to={link.to}
+            end={link.isEnd}
+          >
+            <div className="icon-hover">
+              <FontAwesomeIcon icon={link.icon} />
+              <span>{link.text}</span>
+            </div>
+          </NavLink>
+        ))}
       </nav>
       <ul className={`nav-social ${isOpen ? "open" : ""}`}>
-        <li>
-          <a
-            href="https://www.linkedin.com/in/phanthakarn-plukpanya-358863193/"
-            target="_blank"
-          >
-            <FontAwesomeIcon icon={faLinkedin} className="icon-hover" />
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/phanthakarnp1997" target="_blank">
-            <FontAwesomeIcon icon={faGithub} className="icon-hover" />
-          </a>
-        </li>
+        {socialLinks.map((link) => (
+          <li key={link.href}>
+            <a href={link.href} target="_blank">
+              <FontAwesomeIcon icon={link.icon} className="icon-hover" />
+            </a>
+          </li>
+        ))}
       </ul>
     </div>
   );
 }
+
+export default Sidebar;
