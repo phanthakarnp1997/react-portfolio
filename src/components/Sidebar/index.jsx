@@ -11,10 +11,10 @@ import {
   faEnvelope,
   faBars,
 } from "@fortawesome/free-solid-svg-icons";
+import { BASE_URL } from "../../utils/constant";
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
-  const baseNavigate = "/react-portfolio";
 
   let rootRef = useRef();
 
@@ -38,7 +38,7 @@ export default function Sidebar() {
   return (
     <div className={`nav-bar ${isOpen ? "open" : ""}`} ref={rootRef}>
       <div className="menu">
-        <Link to="/react-portfolio">
+        <Link to={BASE_URL}>
           <p className="text-logo">P</p>
         </Link>
         <FontAwesomeIcon
@@ -50,31 +50,31 @@ export default function Sidebar() {
         />
       </div>
       <nav className={`nav-icon ${isOpen ? "open" : ""}`}>
-        <Link to={baseNavigate}>
+        <Link to={BASE_URL}>
           <div className="icon-hover">
             <FontAwesomeIcon icon={faHouse} />
             <span>Home</span>
           </div>
         </Link>
-        <Link to={`${baseNavigate}/about`}>
+        <Link to={`${BASE_URL}/about`}>
           <div className="icon-hover">
             <FontAwesomeIcon icon={faAddressCard} />
             <span>About Me</span>
           </div>
         </Link>
-        <Link to={`${baseNavigate}/experience`}>
+        <Link to={`${BASE_URL}/experience`}>
           <div className="icon-hover">
             <FontAwesomeIcon icon={faTimeline} />
             <span>Experience</span>
           </div>
         </Link>
-        <Link to={`${baseNavigate}/skill`}>
+        <Link to={`${BASE_URL}/skill`}>
           <div className="icon-hover">
             <FontAwesomeIcon icon={faLightbulb} />
             <span>Skill</span>
           </div>
         </Link>
-        <Link to={`${baseNavigate}/contact`}>
+        <Link to={`${BASE_URL}/contact`}>
           <div className="icon-hover">
             <FontAwesomeIcon icon={faEnvelope} />
             <span>Contact</span>

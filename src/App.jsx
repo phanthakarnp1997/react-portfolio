@@ -6,17 +6,21 @@ import About from "./components/About";
 import Experience from "./components/Experience";
 import Skill from "./components/Skill";
 import Contact from "./components/Contact";
+import { BASE_URL } from "./utils/constant";
 
 function App() {
   return (
     <>
       <Routes>
-        <Route path="/react-portfolio" element={<Layout />}>
+        <Route path={BASE_URL} element={<Layout />}>
           <Route index element={<Home />}></Route>
-          <Route path="about" element={<About />}></Route>
-          <Route path="experience" element={<Experience />}></Route>
-          <Route path="skill" element={<Skill />}></Route>
-          <Route path="contact" element={<Contact />}></Route>
+          <Route path={`${BASE_URL}/about`} element={<About />}></Route>
+          <Route
+            path={`${BASE_URL}/experience`}
+            element={<Experience />}
+          ></Route>
+          <Route path={`${BASE_URL}/skill`} element={<Skill />}></Route>
+          <Route path={`${BASE_URL}/contact`} element={<Contact />}></Route>
         </Route>
       </Routes>
     </>
