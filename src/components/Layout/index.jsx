@@ -2,11 +2,12 @@ import "./index.scss";
 import React from "react";
 import Sidebar from "../Sidebar";
 import { Outlet } from "react-router-dom";
-
+import { ToastContainer } from "react-toastify";
 export default function Layout() {
   return (
     <>
       <div className="App">
+        <ToastContainer />
         <Sidebar />
         <div className="page star-field">
           <div className="layer"></div>

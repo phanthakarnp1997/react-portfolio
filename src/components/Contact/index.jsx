@@ -1,10 +1,15 @@
 import "./index.scss";
-import React from "react";
+import React, { useEffect } from "react";
 import withLoader from "../../utils/withLoader";
 import AnimateText from "../AnimateText";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { object, string } from "yup";
+import {
+  TOAST_SEND_EMAIL_SUCCESS,
+  TOAST_SEND_EMAIL_FAILED,
+} from "../../utils/toastUtil";
+import emailjs from "@emailjs/browser";
 
 function Contact() {
   let schema = object({
@@ -13,15 +18,35 @@ function Contact() {
     subject: string().required(),
     message: string().required(),
   });
-  const { register, handleSubmit, formState } = useForm({
+
+  const { register, handleSubmit, formState, reset } = useForm({
     defaultValues: {},
     resolver: yupResolver(schema),
   });
 
   const { errors } = formState;
 
-  const handleSave = (formValues) => {
-    console.log(formValues);
+  useEffect(() => {
+    reset({});
+  }, [reset]);
+
+  const handleSave = async (formValues) => {
+    try {
+      const response = await emailjs.send(
+        "service_8nz3vlj",
+        "template_yp0kd5d",
+        formValues,
+        "yh2h5agoxdOKpcH_F"
+      );
+      if (response.status == 200) {
+        TOAST_SEND_EMAIL_SUCCESS();
+        reset();
+      } else {
+        TOAST_SEND_EMAIL_FAILED();
+      }
+    } catch (e) {
+      TOAST_SEND_EMAIL_FAILED();
+    }
   };
   return (
     <>
