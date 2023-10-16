@@ -14,6 +14,46 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 function Experience() {
+  const experiences = [
+    {
+      date: "2019 - present",
+      title: "Programmer",
+      company: "CDG Systems Co. Ltd",
+      responsibilities: [
+        "Designed, developed, and deployed RESTful API using ASP.NET Web API",
+        "Created an API for external government agencies",
+        "Developed desktop applications using WPF and Windows Forms",
+        "Developed new and maintains existing applications",
+        "Works closely with Project Manager and Team Leads on change request function",
+      ],
+      iconDefinition: faBriefcase,
+    },
+    {
+      date: "Jun 2019 - Sep 2019",
+      title: "Freelance",
+      responsibilities: ["Developed POS System using Vue.js and Spring Boot"],
+      iconDefinition: faBriefcase,
+    },
+    {
+      date: "Jul 2018 - Oct 2018",
+      title: "Software Developer (Internship)",
+      company: "G-Able Public Company Limited",
+      responsibilities: [
+        "Developed web application using Anuglar",
+        "Developed RESTful API using JAVA and Spring framework",
+      ],
+      iconDefinition: faBriefcase,
+    },
+    {
+      date: "Sep 2016 - Mar 2019",
+      title: "Student (Computer Science)",
+      company: "Rajamangala University of Technology Krungthep",
+      responsibilities: [
+        "Farmer Robot Project Using Arduino, MQTT and (HTML,CSS,JavaScript)",
+      ],
+      iconDefinition: faGraduationCap,
+    },
+  ];
   return (
     <>
       <div className="container experience-page">
@@ -26,61 +66,33 @@ function Experience() {
         </h1>
         <div className="timeline-container">
           <VerticalTimeline>
-            <VerticalTimelineElement
-              className="vertical-timeline-element--work"
-              contentStyle={{ background: "#022C43", color: "#f9f871" }}
-              contentArrowStyle={{
-                borderRight: "7px solid  #022C43",
-              }}
-              date="2019 - present"
-              iconStyle={{ background: "#022C43", color: "#fff" }}
-              icon={<FontAwesomeIcon icon={faBriefcase} />}
-            >
-              <h3 className="vertical-timeline-element-title">Programmer</h3>
-              <h4 className="vertical-timeline-element-subtitle">
-                CDG Systems Co. Ltd
-              </h4>
-              <p>Responisibilty...</p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-              className="vertical-timeline-element--work"
-              contentStyle={{ background: "#022C43", color: "#f9f871" }}
-              contentArrowStyle={{
-                borderRight: "7px solid  #022C43",
-              }}
-              date="Jul 2018 - Oct 2018"
-              iconStyle={{ background: "#022C43", color: "#fff" }}
-              icon={<FontAwesomeIcon icon={faBriefcase} />}
-            >
-              <h3 className="vertical-timeline-element-title">
-                Software Developer (Internship)
-              </h3>
-              <h4 className="vertical-timeline-element-subtitle">
-                G-Able Public Company Limited
-              </h4>
-              <p>Responisibilty...</p>
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-              className="vertical-timeline-element--work"
-              contentStyle={{ background: "#022C43", color: "#f9f871" }}
-              contentArrowStyle={{
-                borderRight: "7px solid  #022C43",
-              }}
-              date="Sep 2016 - Mar 2019"
-              iconStyle={{ background: "#022C43", color: "#fff" }}
-              icon={<FontAwesomeIcon icon={faGraduationCap} />}
-            >
-              <h3 className="vertical-timeline-element-title">
-                Student (Computer Science)
-              </h3>
-              <h4 className="vertical-timeline-element-subtitle">
-                Rajamangala University of Technology Krungthep
-              </h4>
-              <p>
-                Farmer Robot Project Using Arduino, MQTT and
-                (HTML,CSS,JavaScript)
-              </p>
-            </VerticalTimelineElement>
+            {experiences.map((item, index) => (
+              <VerticalTimelineElement
+                key={index}
+                className="vertical-timeline-element--work"
+                contentStyle={{ background: "#022C43", color: "#f9f871" }}
+                contentArrowStyle={{
+                  borderRight: "7px solid  #022C43",
+                }}
+                date={item.date}
+                iconStyle={{ background: "#022C43", color: "#fff" }}
+                icon={<FontAwesomeIcon icon={item.iconDefinition} />}
+              >
+                <h3 className="vertical-timeline-element-title">
+                  {item.title}
+                </h3>
+                <h4 className="vertical-timeline-element-subtitle">
+                  {item.company}
+                </h4>
+                <ul>
+                  {item.responsibilities?.map((responsibilitie, index) => (
+                    <li key={index}>
+                      <p>{responsibilitie}</p>
+                    </li>
+                  ))}
+                </ul>
+              </VerticalTimelineElement>
+            ))}
           </VerticalTimeline>
         </div>
       </div>
