@@ -11,6 +11,7 @@ import {
   faEnvelope,
   faBars,
   faFile,
+  faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import { BASE_URL } from "../../utils/constant";
 
@@ -95,10 +96,10 @@ function Sidebar() {
           <p className="text-logo">P</p>
         </NavLink>
         <FontAwesomeIcon
-          icon={faBars}
+          icon={isOpen ? faXmark : faBars}
           color="#ffd700"
           size="3x"
-          className="hamburger-icon text-logo"
+          className={isOpen ? "x-icon text-logo" : "hamburger-icon text-logo"}
           onClick={toggleSidebar}
         />
       </div>
