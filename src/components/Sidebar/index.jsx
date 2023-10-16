@@ -10,6 +10,7 @@ import {
   faLightbulb,
   faEnvelope,
   faBars,
+  faFile,
 } from "@fortawesome/free-solid-svg-icons";
 import { BASE_URL } from "../../utils/constant";
 
@@ -69,6 +70,10 @@ function Sidebar() {
   ];
 
   const socialLinks = [
+    {
+      href: "https://docdro.id/6DCqdOD",
+      icon: faFile,
+    },
     {
       href: "https://www.linkedin.com/in/phanthakarn-plukpanya-358863193/",
       icon: faLinkedin,
