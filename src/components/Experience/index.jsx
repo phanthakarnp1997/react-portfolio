@@ -31,7 +31,10 @@ function Experience() {
     {
       date: "Jun 2019 - Sep 2019",
       title: "Freelance",
-      responsibilities: ["Developed POS System using Vue.js and Spring Boot"],
+      responsibilities: [
+        "Developed POS System using Vue.js and Spring Boot",
+        "Developed Web Application using Angular and Spring Boot",
+      ],
       iconDefinition: faBriefcase,
     },
     {
