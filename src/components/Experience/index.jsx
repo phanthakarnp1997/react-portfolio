@@ -16,7 +16,22 @@ import {
 function Experience() {
   const experiences = [
     {
-      date: "2019 - present",
+      date: "2024 - present",
+      title: "Programmer Analyst",
+      company: "CDG Systems Co. Ltd",
+      responsibilities: [
+        "Designed, developed, and deployed RESTful API using ASP.NET Web API",
+        "Developed RESTful API using JAVA EE",
+        "Created an API for external government agencies",
+        "Developed desktop applications using WPF",
+        "Developed new and maintains existing applications",
+        "Works closely with Project Manager and Team Leads on change request function",
+        "System Design (Database, System Workflow)",
+      ],
+      iconDefinition: faBriefcase,
+    },
+    {
+      date: "2019 - 2023",
       title: "Programmer",
       company: "CDG Systems Co. Ltd",
       responsibilities: [

@@ -6,14 +6,7 @@ import Lottie from "lottie-react";
 import developerAnimation from "../../assets/developer-animation.json";
 
 function About() {
-  const aboutText = `My name is Phanthakarn Plukpanya. You can also call me Dew. I
-                      graduated with a bachelor’s degree in computer science from
-                      Rajamangala University of Technology Krungthep. I am currently a
-                      software developer. I have years of experience (4 years) in many
-                      programming languages such as C# (.NET Core,.NET Framework), Java
-                      (Springboot, Spring Framework), and Basic in Javascript and TypeScript.
-                      I spend hours studying a new technology or framework to improve my
-                      skillset.`;
+  const aboutText = `My name is Phanthakarn Plukpanya, but you can call me Dew. I graduated with a bachelor’s degree in Computer Science from Rajamangala University of Technology Krungthep. Currently, I work as a programmer analyst and have accumulated 5 years of experience in various programming languages such as C# (.NET Core, .NET Framework), Java (Spring Boot, Spring Framework), as well as system design involving databases and system workflows. Additionally, I have a basic understanding of JavaScript and TypeScript. I dedicate hours to studying new technologies and frameworks to continually enhance my skill set.`;
 
   return (
     <>

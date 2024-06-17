@@ -9,9 +9,9 @@ export default function Home() {
 
   const firstName = "Phanthakarn";
   const lastName = "Plukpanya";
-  const jobName = "Software";
-  const jobName2 = "Developer";
-  const textIntroduce = `Greetings, I am Dew, an experienced software developer with a passion
+  const jobName = "Programer";
+  const jobName2 = "Analyst";
+  const textIntroduce = `Greetings, I am Dew, an experienced programer analyst with a passion
   for problem-solving. I am eager to expand my knowledge of cutting-edge
   technologies and embrace fresh challenges to further enhance my
   skillset.`;
