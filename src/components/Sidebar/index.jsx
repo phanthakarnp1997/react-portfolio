@@ -72,7 +72,7 @@ function Sidebar() {
 
   const socialLinks = [
     {
-      href: "https://docdro.id/6DCqdOD",
+      href: "https://app.resumecoach.com/share/eb01665f5c504ef9a656269a0aa2d06b",
       icon: faFile,
     },
     {
