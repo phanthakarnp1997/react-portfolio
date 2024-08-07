@@ -72,7 +72,7 @@ function Sidebar() {
 
   const socialLinks = [
     {
-      href: "https://app.resumecoach.com/share/eb01665f5c504ef9a656269a0aa2d06b",
+      href: "https://phanthakarn-plukpanya-resume.tiiny.site/",
       icon: faFile,
     },
     {
